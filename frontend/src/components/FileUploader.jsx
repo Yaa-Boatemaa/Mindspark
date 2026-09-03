@@ -43,7 +43,7 @@ const FileUploader = ({ onTextExtracted }) => {
 
     try {
       const response = await axios.post(
-        "http://localhost:5000/api/upload",
+        "https://mindspark-backend-dr9v.onrender.com/api/upload",
         formData,
         { headers: { "Content-Type": "multipart/form-data" } }
       );
@@ -75,7 +75,7 @@ const FileUploader = ({ onTextExtracted }) => {
     setLoadingFlashcards(true);
     try {
       const response = await axios.post(
-        "http://localhost:5000/api/generate_flashcards",
+        "https://mindspark-backend-dr9v.onrender.com/api/generate_flashcards",
         {
           text: preprocessedText,
           count,
@@ -99,7 +99,7 @@ const FileUploader = ({ onTextExtracted }) => {
     setLoadingQuiz(true);
     try {
       const response = await axios.post(
-        "http://localhost:5000/api/generate_quiz",
+        "https://mindspark-backend-dr9v.onrender.com/api/generate_quiz",
         {
           text: preprocessedText,
           count,
